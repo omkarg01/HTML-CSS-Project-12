@@ -5,7 +5,7 @@
 ![hitesh choudhary](https://img.shields.io/badge/Hitesh--Choudhary-Full--stack--JS--bootcamp-red)
 ![HTML & CSS](https://img.shields.io/badge/HTML-CSS-orange)
 
-## Project 12 [Live Link](https://62e4374a28e5db39069e77a2--polite-dieffenbachia-e08395.netlify.app/)
+## Project 12 [Live Link](https://business-og.netlify.app)
 
 -   Skills Gained in this project
     -   Learned about different units used for styling.
