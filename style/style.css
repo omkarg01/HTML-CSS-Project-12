@@ -9,10 +9,10 @@
 }
 
 :root {
-    --bg-grey: #636c79;
-    --dark-grey: #424242;
-    --green: #8bb7a2;
-    --text-dark: #1b1d21;
+    --bg-grey: #697280;
+    --dark-grey: #414040;
+    --green: #83b19b;
+    --text-dark: #181a1e;
     --text-grey: #8c8c8c;
     --white: #FFFFFF;
 }
@@ -32,25 +32,20 @@ HTML {
     cursor: pointer;
     font-weight: 600;
     padding: 1rem 4rem;
-}
-
-.btn-outline {
-    background-color: transparent;
-    border: 2px solid var(--text-grey);
-}
-
-.btn-fill {
-    background-color: var(--green);
-}
-
-.btn-lg {
-    font-size: 16px;
-    padding: 1.8rem 5rem;
+    font-size: 2rem;
 }
 
 header {
     background-color: var(--bg-grey);
-    width: 100%;
+    /* width: 90%; */
+    margin-inline: auto;
+    padding-block: 3rem;
+
+}
+
+.container {
+    width: 90%;
+    margin: auto;
 }
 
 /* ------------------------------ */
@@ -59,9 +54,10 @@ header {
 .navbar {
     align-items: center;
     display: flex;
-    height: 15vh;
+    /* height: 15vh; */
     justify-content: space-between;
-    padding: 0 5%;
+    /* padding: 0 5%; */
+    margin-bottom: 3rem;
 }
 
 .navbar .logo {
@@ -69,7 +65,7 @@ header {
 }
 
 .navbar .logo img {
-    width: 110px;
+    width: 10rem;
 }
 
 .navbar .list {
@@ -91,28 +87,39 @@ header {
     margin-bottom: 30px;
 }
 
+.navbar .btn {
+    background-color: transparent;
+    border: 2px solid var(--text-grey);
+}
+
+.fa-solid.fa-bars{
+    display: none;
+}
+
 /* ------------------------------ */
 /* ---------- HERO ------------ */
 /* ------------------------------ */
 .hero {
     align-items: center;
     display: flex;
-    gap: 90px;
-    height: 85vh;
-    justify-content: space-around;
+    gap: 5rem;
     padding-bottom: 20px;
-    width: 90vw;
 }
 
-.hero-image {
-    border-radius: 1rem;
+.hero-left,
+.hero-right {
+    width: 100%;
+}
+
+.hero-left {
+    border-radius: 2rem;
     height: 60rem;
-    margin: 0 10rem;
+    margin: 0 3rem;
     overflow: hidden;
-    width: 50rem;
 }
 
-.hero-image img {
+
+.hero-left img {
     height: 100%;
     object-fit: cover;
     width: 100%;
@@ -135,20 +142,22 @@ header {
 
 .email {
     position: relative;
+    width: 100%;
 }
 
 .email input {
     outline: none;
     padding-left: 2rem;
     padding-right: 20rem;
-    padding: 3rem 0;
-    width: 60rem;
+    padding: 3rem 5rem;
+    /* width: 60rem; */
+    width: 80%;
 }
 
 .email input::placeholder {
     color: var(--text-grey);
     font-size: 1.5rem;
-    padding-left: 4rem;
+    padding-left: 0rem;
 }
 
 .email i {
@@ -167,14 +176,14 @@ header {
 /* ------------------------------ */
 /* ---------- GROWTH ------------ */
 /* ------------------------------ */
-.growth-section {
-}
+.growth-section {}
 
 .growth {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin: 110px auto 0 auto;
+    margin-inline: auto;
+    margin-top: 5rem;
     max-width: 78rem;
 }
 
@@ -182,7 +191,7 @@ header {
     color: var(--text-dark);
     font-family: "Raleway";
     font-size: 4.5rem;
-    padding-bottom: 60px;
+    padding-bottom: 6rem;
     text-align: center;
 }
 
@@ -236,21 +245,31 @@ header {
     text-align: center;
 }
 
-.services-section-one,
-.services-section-two,
-.services-section-three {
-    background-color: #cccccc;
-    background-color: var(--white);
-    margin: 10rem auto;
-}
-
 .services {
     align-items: center;
     display: flex;
     gap: 10rem;
+    flex-direction: column;
     justify-content: space-around;
     margin: 40px auto 0 auto;
     max-width: 80%;
+}
+
+.services-section-one,
+.services-section-two,
+.services-section-three {
+    display: flex;
+    gap: 5rem;
+}
+
+.services-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.services-section-two {
+    flex-direction: row-reverse;
 }
 
 .services-left h3 {
@@ -268,31 +287,31 @@ header {
     padding-bottom: 30px;
 }
 
-.services-img {
-    height: 55rem;
-    overflow: hidden;
-    width: 55rem;
+.services-left .btn {
+    margin-right: auto;
+    background-color: var(--green);
 }
 
-.services-img img {
+.services-right {
+    height: 55rem;
+    width: 100%;
+}
+
+.services-right img {
     height: 100%;
     object-fit: cover;
     object-position: right;
     width: 100%;
 }
 
-.services-section-two .services-left {
-    order: 2;
-}
-
-.services-section-two .services-img img {
+.services-section-two img {
     height: 100%;
     object-fit: cover;
     object-position: top;
     width: 100%;
 }
 
-.services-section-three .services-img img {
+.services-section-three img {
     height: 100%;
     object-fit: cover;
     object-position: top;
@@ -315,13 +334,13 @@ header {
     justify-content: space-between;
 }
 
-.team-section>.headline>h1 {
+.team-section h1 {
     color: var(--text-dark);
     font-family: "Raleway";
     font-size: 4.5rem;
 }
 
-.team-section>.headline>p {
+.team-section p {
     color: var(--text-grey);
     font-size: 2.2rem;
     font-weight: 400;
@@ -331,7 +350,7 @@ header {
 .team-members {
     display: flex;
     justify-content: space-between;
-    padding-top: 60px;
+    padding-top: 6rem;
 }
 
 .team-card .img {
@@ -347,24 +366,25 @@ header {
     width: 100%;
 }
 
-.team-members .team-card h3 {
+.team-card h3 {
     color: var(--text-dark);
     font-size: 2.5rem;
     padding-block: 2rem;
 }
 
-.team-members .team-card p {
+.team-card p {
     color: var(--dark-grey);
     font-size: 1.5rem;
 }
 
-.team-section .btn {
-    padding-top: 50px;
+.btn-team {
     text-align: center;
+    margin-top: 5rem;
 }
 
-.team-section .btn button {
-    padding: 20px 60px;
+.team-section button {
+    padding: 2rem 6rem;
+    background-color: var(--green);
 }
 
 /* ------------------------------ */
@@ -379,7 +399,8 @@ header {
 .footer-logo {
     align-items: center;
     display: flex;
-    height: 15rem;
+    /* height: 15rem; */
+    padding-block: 3rem;
     justify-content: space-between;
 }
 
@@ -409,12 +430,12 @@ header {
     padding: 8rem 0 10rem 0;
 }
 
-.footer-nav .list h3 {
+.footer-nav h3 {
     font-size: 1.8rem;
     padding-bottom: 2.2rem;
 }
 
-.footer-nav .list ul {
+.footer-nav ul {
     color: var(--text-grey);
     display: flex;
     flex-direction: column;
@@ -422,4 +443,248 @@ header {
     font-weight: 600;
     gap: 2rem;
     list-style-type: none;
+}
+
+@media (width <=425px) {
+
+    * {
+        /* background-color: #8bb7a2; */
+        /* opacity: 0.2; */
+        /* border: 2px solid red; */
+    }
+
+    .navbar .logo {
+        flex: 1;
+    }
+
+    .navbar .list {
+        display: none;
+    }
+
+    .navbar div:nth-child(3){
+        /* display: none; */
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    .navbar .btn{
+        padding-inline: 2rem;
+        padding-block: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .fa-solid.fa-bars{
+        display: block;
+        margin-left: 1rem;
+    }
+
+
+    .hero {
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .hero-left {
+        margin: 0rem;
+        width: 100%;
+        height: 70%;
+    }
+
+    .hero-left img {
+        width: 100%;
+    }
+
+    .hero-right h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .hero-right p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-block: 1rem;
+    }
+
+
+
+    .growth h2 {
+        padding: 0;
+        margin-block: 1rem;
+        font-size: 2.5rem;
+        width: 80%;
+    }
+
+    .growth-stats {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .growth-stats h4 {
+        font-size: 2rem;
+    }
+
+    .growth-stats p {
+        font-size: 1.5rem;
+        padding: 0;
+        padding-block: 1rem;
+    }
+
+    .growth-img {
+        height: 15rem;
+    }
+
+
+
+    .service-heading {
+        margin-top: 5rem;
+        font-size: 2.8rem;
+        width: 80%;
+        margin-inline: auto;
+        padding: 0;
+    }
+
+    .services {
+        gap: 3rem;
+        margin-top: 2rem;
+    }
+
+    .services .services-section-one,
+    .services .services-section-two,
+    .services .services-section-three {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+
+    .services-left {
+        text-align: center;
+    }
+
+    .services-left h3 {
+        font-size: 2.2rem;
+        padding: 0;
+    }
+
+    .services-left p {
+        font-size: 1.5rem;
+        padding-block: 2rem;
+    }
+
+    .services-left .btn {
+        padding-block: 1rem;
+        padding-inline: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .services-left button {
+        margin-inline: auto;
+    }
+
+    .services-right {
+        height: 20rem;
+    }
+
+
+
+    .headline {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 5rem;
+    }
+
+    .headline h1 {
+        font-size: 3rem;
+        /* line-height: rem; */
+    }
+
+    .headline p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-block: 1rem;
+    }
+
+    .team-section {
+        padding: 0;
+        margin-block: 3rem;
+    }
+
+    .team-members {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .team-card {
+        margin-block: 1rem;
+        text-align: center;
+    }
+
+    .team-card .img {
+        width: 100%;
+        height: 30rem;
+        overflow: hidden;
+    }
+
+    .team-card h3 {
+        padding-block: 1rem;
+    }
+
+    .team-card p {
+        padding-block: 0.5rem;
+        line-height: 2rem;
+    }
+
+    .btn-team {
+        text-align: center;
+        margin: 0;
+    }
+
+    .btn-team .btn {
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+    }
+
+
+
+    .footer .footer-logo {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+    }
+
+    .footer-logo img {
+        width: 10rem;
+    }
+
+    .footer-logo ul li span {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .footer-logo ul {
+        gap: 2rem;
+    }
+
+
+    .footer-nav {
+        padding: 3rem 0 3rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+
+    .footer-nav h3 {
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .footer-nav ul {
+        gap: 0.3rem;
+        font-size: 1.2rem;
+    }
+
+
 }
