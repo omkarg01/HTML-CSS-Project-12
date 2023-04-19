@@ -15,7 +15,7 @@
 
 ## Time taken to finish this project
 
--   Approximately 6-8 hour taken to complete this one.
+-   Approximately 13-14 hour taken to complete this one.
 
 #### Screenshot
 
